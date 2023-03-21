@@ -22,7 +22,6 @@ public class Main {
         System.out.println("-----");
     }
 
-
     public static void deleteItem() {
         showItem();
         System.out.println("Какую хотите удалить? Выберите номер или название");
@@ -57,7 +56,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Выберите нужную операцию");
-
         while (true) {
             System.out.println("""
                     1. Добавить\s
@@ -65,19 +63,17 @@ public class Main {
                     3. Удалить\s
                     4. Найти\s
                     99. Выйти""");
-                int input = scanner.nextInt();
-                if (input == 99) {
-                    System.out.println("Программа завершена!");
-                    break;
-                }
-                switch (input) {
-                    case 1 -> addItem();
-                    case 2 -> showItem();
-                    case 3 -> deleteItem();
-                    case 4 -> findItem();
-                }
-
-
+            int input = scanner.nextInt();
+            if (input == 99) {
+                System.out.println("Программа завершена!");
+                break;
+            }
+            switch (input) {
+                case 1 -> addItem();
+                case 2 -> showItem();
+                case 3 -> deleteItem();
+                case 4 -> findItem();
+            }
         }
     }
 }
